@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Library</title>
+  <link
+    href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAxDsfAAoDAQAfxLkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACIiIiIiIiIAIiIiIiIiIgAiIiIiEREiACIiAAARESIAIiIAABERIgAiIgAAERECACIiAAAREQAAIiIAABERAAAiIgAAEREAACIiAAAREQAAIiIAABERAAAiIgAAAAAAICIiAgAzMwAiIiIiADMzACIiIiIAMzMAIiIiIiAzMwDAAAAAwAAAAMAAAADDwAAAw8AAAMPCAADDwwAAw8MAAMPDAADDwwAAw8MAAMP/AABCwwAAAMMAAADDAAAAQwAA"
+    rel="icon" type="image/x-icon" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="container">
+  <h1 class="main_header">My Library</h1>
+
+  <form id="myForm">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" name="title" id="title" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="author">Author</label>
+      <input type="text" name="author" id="author" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="numPages">Pages</label>
+      <input type="number" name="numPages" id="numPages" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="readStatus">Status</label>
+      <select name="select" id="readStatus" class="custom-select form-select">
+        <option value="Already Read">Already Read</option>
+        <option value="Not Read">Not Read</option>
+      </select>
+    </div>
+    <input type="submit" id="submit" value="Submit" class="btn btn-primary mt-3" />
+  </form>
+
+  <button type="button" class="btn btn-primary btn-lg main_btn">Add Books</button>
+  <script src="app.js"></script>
+</body>
+
+</html>
