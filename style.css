@@ -24,3 +24,7 @@ body{
   justify-content: center;
   margin: 0 auto;
 }
+
+.form_list{
+  display: none;
+}
