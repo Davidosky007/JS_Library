@@ -33,3 +33,77 @@ const $table = document
     updateLocalStorage();
     render();
   });
+
+  [3:33 pm, 03/03/2021] Grace: Hiij
+[4:06 pm, 03/03/2021] David: class Book {
+  constructor(name, author, pages, status) {
+    this.name = name;
+    this.author = author;
+    this.pages = pages;
+    this.status = status;
+  }
+}
+
+function addBookToLibrary() {
+  if ($name.value.length === 0 || $author.value.length === 0) {
+    alert('Please, fill all the fields');
+    return;
+  }
+  const newBook = new Book($name.value, $author.value, $status.value, $pages.value);
+
+  library.push(newBook);
+  updateLocalStorage();
+}
+function changeStatus(book) {
+  if (library[book].status === 'read') {
+    library[book].status = 'not read';
+  } else library[book].status = 'read';
+}
+function deleteBook(currentBook) {
+  library.splice(currentBook, currentBook + 1);
+}
+function findBook(libraryArray, name) {
+  if (libraryArray.length === 0 || libraryArray === null) {
+    return;
+  }
+  for (book of libraryArray) {
+    if (book.name === name) {
+      return libraryArray.indexOf(book);
+    }
+  }
+}
+function clearForm() {
+  $name.value = '';
+  $author.value = '';
+  $pages.value = '';
+}
+function updateLocalStorage() {
+  localStorage.setItem('library', JSON.stringify(library));
+}
+function checkLocalStorage() {
+  if (localStorage.getItem('library')) {
+    library = JSON.parse(localStorage.getItem('library'));
+  } else {
+    library = DEFAULT_DATA;
+  }
+}
+
+function render() {
+  checkLocalStorage();
+  $tableBody.innerHTML = '';
+  library.forEach((book) => {
+    const htmlBook = `
+      <tr>
+        <td>${book.name}</td>
+        <td>${book.author}</td>
+        <td>${book.pages}</td>
+        <td>${book.status}</td>
+        <td><button class="status-button">${book.status}</button></td>
+        <td><button class="delete">delete</button></td>
+      </tr>
+      `;
+    $tableBody.insertAdjacentHTML('afterbegin', htmlBook);
+  });
+}
+
+render();
