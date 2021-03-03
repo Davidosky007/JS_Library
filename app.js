@@ -1,17 +1,26 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-restricted-syntax */
+/* eslint-disable no-alert */
+/* eslint-disable no-restricted-globals */
+/* eslint-disable no-use-before-define */
 let library;
 const DEFAULT_DATA = [
-  { name: 'The Lord of the Rings', author: 'Tolkien', pages: 266, status: 'read' },
+  {
+    name: 'The Lord of the Rings', author: 'Tolkien', pages: 266, status: 'read',
+  },
   {
     name: 'Alice in Wonderland',
     author: 'Lewis Caroll',
     status: 'not read',
   },
-  { name: 'Naruto', author: 'Masashi Kishimoto', pages: 543, status: 'read' },
+  {
+    name: 'Naruto', author: 'Masashi Kishimoto', pages: 543, status: 'read',
+  },
 ];
 const $name = document.querySelector('#name');
 const $author = document.querySelector('#author');
-const $status = document.querySelector('#status');
 const $pages = document.querySelector('#pages');
+const $status = document.querySelector('#status');
 const $tableBody = document.querySelector('#book-table-body');
 const $form = document.querySelector('form').addEventListener('submit', (e) => {
   e.preventDefault();
@@ -34,7 +43,7 @@ const $table = document
     render();
   });
 
- class Book {
+class Book {
   constructor(name, author, pages, status) {
     this.name = name;
     this.author = author;
@@ -48,7 +57,7 @@ function addBookToLibrary() {
     alert('Please, fill all the fields');
     return;
   }
-  const newBook = new Book($name.value, $author.value, $status.value, $pages.value);
+  const newBook = new Book($name.value, $author.value, $pages.value, $status.value);
 
   library.push(newBook);
   updateLocalStorage();
@@ -71,6 +80,11 @@ function findBook(libraryArray, name) {
     }
   }
 }
+
+function addClassToForm() {
+  document.getElementById('myForm').classList.toggle('form_list');
+}
+
 function clearForm() {
   $name.value = '';
   $author.value = '';
@@ -97,12 +111,12 @@ function render() {
         <td>${book.author}</td>
         <td>${book.pages}</td>
         <td>${book.status}</td>
-        <td><button class="status-button">${book.status}</button></td>
-        <td><button class="delete">delete</button></td>
+        <td><button class="status-button btn btn-success">${book.status}</button></td>
+        <td><button class="delete btn btn-danger">delete</button></td>
       </tr>
       `;
     $tableBody.insertAdjacentHTML('afterbegin', htmlBook);
   });
 }
 
-render(); 
+render();
