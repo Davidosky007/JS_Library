@@ -15,7 +15,7 @@ A simple vanila Javascript, HTML, and CSS3, project .This project has the follow
 
 ## Live Demo
 
-- [Live Demo Link](https://booktransaction2021.herokuapp.com/)
+- [Live Demo Link](https://davidosky007.github.io/JS_Library/)
 
 
 ## Built With

@@ -34,8 +34,7 @@ const $table = document
     render();
   });
 
-  [3:33 pm, 03/03/2021] Grace: Hiij
-[4:06 pm, 03/03/2021] David: class Book {
+ class Book {
   constructor(name, author, pages, status) {
     this.name = name;
     this.author = author;
@@ -106,4 +105,4 @@ function render() {
   });
 }
 
-render();
+render(); 
