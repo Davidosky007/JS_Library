@@ -5,7 +5,7 @@
   src: local('Bodoni'), url('bodoni_[allfont.net].woff') format('woff');
 }
 
-body{
+.banner{
   background-color: darkgray;
 }
 
