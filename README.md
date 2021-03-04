@@ -26,7 +26,7 @@ A simple vanila Javascript, HTML, and CSS3, project .This project has the follow
 
 ### Install and Setup
 
-- Clone repo to your local `https://github.com/Davidosky007/JS_Library/issues`
+- Clone repo to your local `https://github.com/Davidosky007/JS_Library`
 - cd into the cloned repo
 - Open a terminal in the root of the app
 
