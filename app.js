@@ -7,19 +7,6 @@
 /* eslint-disable no-restricted-globals */
 /* eslint-disable no-use-before-define */
 let library;
-const DEFAULT_DATA = [
-  {
-    name: 'The Lord of the Rings', author: 'Tolkien', pages: 266, status: 'read',
-  },
-  {
-    name: 'Alice in Wonderland',
-    author: 'Lewis Caroll',
-    status: 'not read',
-  },
-  {
-    name: 'Naruto', author: 'Masashi Kishimoto', pages: 543, status: 'read',
-  },
-];
 const $name = document.querySelector('#name');
 const $author = document.querySelector('#author');
 const $pages = document.querySelector('#pages');
@@ -56,10 +43,10 @@ class Book {
 }
 
 function addBookToLibrary() {
-  if ($name.value.length === 0 || $author.value.length === 0) {
-    alert('Please, fill all the fields');
-    return;
-  }
+  // if ($name.value.length === 0 || $author.value.length === 0 || $pages.value.length === 0) {
+  //   alert('Please, fill all the fields');
+  //   return;
+  // }
   const newBook = new Book($name.value, $author.value, $pages.value, $status.value);
 
   library.push(newBook);
@@ -71,7 +58,7 @@ function changeStatus(book) {
   } else library[book].status = 'read';
 }
 function deleteBook(currentBook) {
-  library.splice(currentBook, currentBook + 1);
+  library.splice(currentBook, 1);
 }
 function findBook(libraryArray, name) {
   if (libraryArray.length === 0 || libraryArray === null) {
@@ -100,8 +87,6 @@ function updateLocalStorage() {
 function checkLocalStorage() {
   if (localStorage.getItem('library')) {
     library = JSON.parse(localStorage.getItem('library'));
-  } else {
-    library = DEFAULT_DATA;
   }
 }
 
