@@ -6,7 +6,7 @@
 /* eslint-disable no-alert */
 /* eslint-disable no-restricted-globals */
 /* eslint-disable no-use-before-define */
-let library;
+let library = [];
 const $name = document.querySelector('#name');
 const $author = document.querySelector('#author');
 const $pages = document.querySelector('#pages');
