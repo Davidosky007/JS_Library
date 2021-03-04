@@ -43,10 +43,6 @@ class Book {
 }
 
 function addBookToLibrary() {
-  // if ($name.value.length === 0 || $author.value.length === 0 || $pages.value.length === 0) {
-  //   alert('Please, fill all the fields');
-  //   return;
-  // }
   const newBook = new Book($name.value, $author.value, $pages.value, $status.value);
 
   library.push(newBook);
