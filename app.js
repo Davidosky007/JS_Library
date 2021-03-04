@@ -1,3 +1,6 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable consistent-return */
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 /* eslint-disable no-restricted-syntax */
 /* eslint-disable no-alert */
@@ -89,6 +92,7 @@ function clearForm() {
   $name.value = '';
   $author.value = '';
   $pages.value = '';
+  $status.value = '';
 }
 function updateLocalStorage() {
   localStorage.setItem('library', JSON.stringify(library));

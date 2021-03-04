@@ -15,11 +15,11 @@
 
 <body class="container banner">
   <h1 class="main_header">My Library</h1>
-  <div class="row">
+  <div>
     <form action="" id="myForm">
       <div class="form-group">
         <label for="name">Title</label>
-        <input type="text" class="form-control w-100" id="name" />
+        <input type="text" class="form-control text-field" id="name" />
       </div>
       <div class="form-group">
         <label for="author">Author</label>
@@ -36,7 +36,7 @@
           <option value="not read">Not read</option>
         </select>
       </div>
-      <input type="submit" value="submit" class="btn btn-primary mb-5" />
+      <input type="submit" value="submit" class="btn btn-info btn-lg btn-block" />
     </form>
   </div>
   <button type="button" class="btn btn-primary btn-lg btn-block mt-5" id="btn" onclick="addClassToForm()">Add
@@ -44,7 +44,7 @@
   <div class="row">
     <div class="twelve columns"></div>
     <table class="table table-hover mt-4">
-      <tr>
+      <tr class="table-dark">
         <th scope="col">Name</th>
         <th scope="col">Author</th>
         <th scope="col">Pages</th>
