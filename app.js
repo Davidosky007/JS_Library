@@ -33,17 +33,21 @@ const $table = document
     render();
   });
 
-class Book {
-  constructor(name, author, pages, status) {
-    this.name = name;
-    this.author = author;
-    this.pages = pages;
-    this.status = status;
-  }
-}
+// class Book {
+//   constructor(name, author, pages, status) {
+//     this.name = name;
+//     this.author = author;
+//     this.pages = pages;
+//     this.status = status;
+//   }
+// }
+
+const createBook = (name, author, pages, status) => ({
+  name, author, pages, status,
+});
 
 function addBookToLibrary() {
-  const newBook = new Book($name.value, $author.value, $pages.value, $status.value);
+  const newBook = createBook($name.value, $author.value, $pages.value, $status.value);
 
   library.push(newBook);
   updateLocalStorage();
